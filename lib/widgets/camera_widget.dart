@@ -12,7 +12,7 @@ class CameraButtonWidget extends StatelessWidget {
           child: Center(
             child: ListTile(
               leading: Icon(Icons.camera_alt),
-              title: Text('Camera'),
+              title: Text('Open Camera'),
               onTap: () => pickCameraMedia(context),
             ),
           ),

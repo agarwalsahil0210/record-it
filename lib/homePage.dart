@@ -44,11 +44,9 @@ class _HomePageState extends State<HomePage> {
           children: [
             // ? Column(children: [
             //     SizedBox(height: 20),
-            SizedBox(
-                child: fileMedia != null
-                    ? RecordVideoPage(fileMedia)
-                    : Icon(Icons.videocam),
-                width: 300,
+            Container(
+                child: fileMedia != null ? RecordVideoPage(fileMedia) : null,
+                // width: 300,
                 height: 300),
             Expanded(
               child: ListView.builder(
@@ -64,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                           ? "Record Video"
                           : "Record Audio"),
                       trailing: IconButton(
-                        icon: Icon(Icons.play_arrow),
+                        icon: Icon(Icons.arrow_forward_ios),
                         onPressed: () {
                           _items[index]["type"] == "VIDEO"
                               ? capture(MediaSource.image)
