@@ -10,10 +10,16 @@ class CameraButtonWidget extends StatelessWidget {
       body: SafeArea(
         child: Container(
           child: Center(
-            child: ListTile(
-              leading: Icon(Icons.camera_alt),
-              title: Text('Open Camera'),
-              onTap: () => pickCameraMedia(context),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF473bf0),
+                padding: EdgeInsets.all(10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text('Open Camera'),
+              onPressed: () => pickCameraMedia(context),
             ),
           ),
         ),

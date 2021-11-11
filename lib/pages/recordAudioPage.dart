@@ -8,18 +8,6 @@ import 'package:path_provider/path_provider.dart';
 
 class RecordAudioPage extends StatefulWidget {
   // RecordAudioPage{String title}{Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  // final String title;
-
   @override
   _RecordAudioPageState createState() => _RecordAudioPageState();
 }
@@ -160,6 +148,7 @@ class _RecordAudioPageState extends State<RecordAudioPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF473bf0),
         title: Text("Record Audio"),
       ),
       body: Center(
@@ -248,6 +237,7 @@ class _RecordAudioPageState extends State<RecordAudioPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Color(0xFF473bf0),
         onPressed: _opt,
         child: _buttonIcon,
       ), // This trailing comma makes auto-formatting nicer for build methods.

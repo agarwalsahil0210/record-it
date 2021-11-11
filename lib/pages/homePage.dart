@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:zorp_assignment/recordAudioPage.dart';
-import 'package:zorp_assignment/PlayVideoPage.dart';
+import 'package:zorp_assignment/pages/recordAudioPage.dart';
+import 'package:zorp_assignment/pages/PlayVideoPage.dart';
 import 'package:zorp_assignment/widgets/camera_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
     readJson();
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color(0xFF473bf0),
         title: Text('ZORP'),
         centerTitle: true,
       ),
@@ -87,8 +88,12 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Color(0xFF473bf0),
+              ),
               onPressed: () {
-                // Validate returns true if the form is valid, or false otherwise.
+                showAlertDialog(
+                    context); // Validate returns true if the form is valid, or false otherwise.
                 // if (_formKey.currentState!.validate()) {
                 //   // If the form is valid, display a snackbar. In the real world,
                 //   // you'd often call a server or save the information in a database.
@@ -104,6 +109,32 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+    );
+  }
+
+  showAlertDialog(BuildContext context) {
+    // Create button
+    Widget okButton = FlatButton(
+      child: Text("OK"),
+      onPressed: () {
+        Navigator.of(context).pop();
+      },
+    );
+
+    // Create AlertDialog
+    AlertDialog alert = AlertDialog(
+      content: Text("Submitted Successfully!"),
+      actions: [
+        okButton,
+      ],
+    );
+
+    // show the dialog
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
     );
   }
 
