@@ -1,13 +1,13 @@
 import 'dart:io';
-import 'package:zorp_assignment/model/media_source.dart';
+import 'package:record_it/model/media_source.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:zorp_assignment/pages/recordAudioPage.dart';
-import 'package:zorp_assignment/pages/PlayVideoPage.dart';
-import 'package:zorp_assignment/widgets/camera_widget.dart';
+import 'package:record_it/pages/recordAudioPage.dart';
+import 'package:record_it/pages/PlayVideoPage.dart';
+import 'package:record_it/widgets/camera_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF473bf0),
-        title: Text('ZORP'),
+        title: Text('RECORD IT'),
         centerTitle: true,
       ),
       body: Padding(
@@ -89,6 +89,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
+                minimumSize: Size(100, 40),
                 primary: Color(0xFF473bf0),
               ),
               onPressed: () {
@@ -123,7 +124,13 @@ class _HomePageState extends State<HomePage> {
 
     // Create AlertDialog
     AlertDialog alert = AlertDialog(
-      content: Text("Submitted Successfully!"),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.check_circle, size: 50),
+          Text("Submitted Successfully!"),
+        ],
+      ),
       actions: [
         okButton,
       ],

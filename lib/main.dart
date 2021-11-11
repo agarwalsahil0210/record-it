@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:zorp_assignment/pages/homePage.dart';
+import 'package:record_it/pages/homePage.dart';
 import 'dart:async';
 
 import 'package:camera/camera.dart';
-import 'package:zorp_assignment/pages/PlayVideoPage.dart';
+import 'package:record_it/pages/PlayVideoPage.dart';
 
 Future<void> main() async {
   runApp(MyApp());

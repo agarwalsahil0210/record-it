@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zorp_assignment">
+    package="com.example.record_it">
    <application
-        android:label="zorp_assignment"
+        android:label="record_it"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

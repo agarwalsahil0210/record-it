@@ -216,6 +216,8 @@ class _RecordAudioPageState extends State<RecordAudioPage> {
               ),
               RaisedButton(
                 child: Text('Play'),
+                color: Color(0xFF473bf0),
+                textColor: Colors.white,
                 disabledTextColor: Colors.white,
                 disabledColor: Colors.grey.withOpacity(0.5),
                 onPressed: _recording?.status == RecordingStatus.Stopped
