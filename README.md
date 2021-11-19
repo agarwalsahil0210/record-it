@@ -1,6 +1,6 @@
 # Record It
 
-A new Flutter project.
+An app made with flutter which renders dynamic widgets according to a json configuration. Records audio and video and saves in in local storage.
 
 ## Getting Started
 
